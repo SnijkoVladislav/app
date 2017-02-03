@@ -1,0 +1,9 @@
+<nav class="registration-navbar">
+  <ul class="registration-navbar__breadcrumps">
+      <li ng-repeat="step in $ctrl.breadcrumps"><a href="" ng-click="$ctrl.goToStep(step)">{{$index > 0 ? '/' : ''}}{{step}}</a></li>
+  </ul>
+  <ul class="registration-navbar__nav">
+    <li><a class="btn" ng-if="$ctrl.previousStep" ng-click="$ctrl.goToPreviousStep()">Previous step</a></li>
+    <li><a class="btn" ng-click="$ctrl.goToHome()">Home</a></li>
+  </ul>
+</nav>
